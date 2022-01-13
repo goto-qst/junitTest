@@ -154,12 +154,12 @@ class JudgeUtilsTest {
 	}
 	
 	// ケースNo2
-	// ケース内容：18歳(04/02)でプレイ可能
-	// 誕生時刻(引数)：2000/04/01
+	// ケース内容：17歳(04/02)でプレイ可能
+	// 誕生時刻(引数)：2001/04/01
 	// 現在時刻：2018/04/02
 	// 合格条件：true
 	@Test
-	public void testIsRegisterdAge_18歳_0402生まれ_プレイ可能() {
+	public void testIsRegisterdAge_17歳_0402生まれ_プレイ可能() {
 
 		// 事前処理(Mock)
 		Calendar cal = Calendar.getInstance();
@@ -173,7 +173,7 @@ class JudgeUtilsTest {
 		// 引数
 		Calendar birthcal = Calendar.getInstance();
 		birthcal.clear();
-		birthcal.set(Calendar.YEAR, 2000);
+		birthcal.set(Calendar.YEAR, 2001);
 		birthcal.set(Calendar.MONTH, Calendar.APRIL);
 		birthcal.set(Calendar.DAY_OF_MONTH, 01);
 		Date birthDay = birthcal.getTime();
@@ -187,12 +187,12 @@ class JudgeUtilsTest {
 	}
 
 	// ケースNo3
-	// ケース内容：17歳(04/01)でプレイ不可能
-	// 誕生時刻(引数)：2000/04/01
+	// ケース内容：16歳(04/01)でプレイ不可能
+	// 誕生時刻(引数)：2001/04/01
 	// 現在時刻：2017/04/01
 	// 合格条件：false
 	@Test
-	public void testIsRegisterdAge_17歳_プレイ不可() {
+	public void testIsRegisterdAge_16歳_プレイ不可() {
 
 		// 事前処理(Mock)
 		Calendar cal = Calendar.getInstance();
@@ -206,7 +206,7 @@ class JudgeUtilsTest {
 		// 引数
 		Calendar birthcal = Calendar.getInstance();
 		birthcal.clear();
-		birthcal.set(Calendar.YEAR, 2000);
+		birthcal.set(Calendar.YEAR, 2001);
 		birthcal.set(Calendar.MONTH, Calendar.APRIL);
 		birthcal.set(Calendar.DAY_OF_MONTH, 01);
 		Date birthDay = birthcal.getTime();
